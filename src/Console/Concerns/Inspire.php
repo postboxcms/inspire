@@ -1,9 +1,9 @@
 <?php
 
-namespace PostboxCMS\Inspire;
+namespace PostboxCMS\Inspire\Console\Concerns;
 use GuzzleHttp\Client;
 
-class Inspire
+trait Inspire
 {
     protected $client;
 

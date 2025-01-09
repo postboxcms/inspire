@@ -8,6 +8,13 @@
             "Postboxcms\\Inspire\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PostboxCMS\\Inspire\\InspireServiceProvider"
+            ]
+        }
+    },
     "authors": [
         {
             "name": "Sanket Raut",
