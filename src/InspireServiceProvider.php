@@ -10,9 +10,13 @@ class InspireServiceProvider extends ServiceProvider
     /**
      * Register services.
      */
-    public function register(): void
+    public function registerCommands(): void
     {
-        $this->registerCommands();
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                InspireCommand::class,
+            ]);
+        }
     }
 
     /**
@@ -20,10 +24,6 @@ class InspireServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        if ($this->app->runningInConsole()) {
-            $this->commands([
-                InspireCommand::class,
-            ]);
-        }
+        $this->registerCommands();
     }
 }
