@@ -22,6 +22,10 @@ class InspireCommand extends Command
      */
     protected $description = 'Generate a motivational quote';
 
+    public function __construct() {
+        parent::__construct();
+    }
+
     /**
      * Execute the console command.
      */
@@ -29,6 +33,6 @@ class InspireCommand extends Command
     {
         // call the inspire method
         $quote = $this->getQuote();
-        $this->output->writeln('  <bg=blue;fg=white> INFO </> '.$quote);
+        $this->output->writeln('<fg=magenta>"'.$quote['quote'].'"</><fg=cyan>' . PHP_EOL . ' - ' . $quote['author'] . '</>');
     }
 }
