@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 
 class InspireCommand extends Command
 {
-    use Concerns\Inspire;
+    use Concerns\QuoteService;
 
     /**
      * The name and signature of the console command.

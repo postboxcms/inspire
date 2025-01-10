@@ -3,7 +3,7 @@
 namespace PostboxCMS\Inspire\Console\Concerns;
 use GuzzleHttp\Client;
 
-trait Inspire
+trait QuoteService
 {
     protected $client;
 
