@@ -20,10 +20,30 @@ class InspireServiceProvider extends ServiceProvider
     }
 
     /**
+     * Register routes.
+     */
+    public function registerRoutes(): void
+    {
+        $this->loadRoutesFrom(__DIR__.'/routes/web.php');
+    }
+
+    /**
+     * Register publishing.
+     */
+    public function registerPublishing(): void
+    {
+        $this->publishes([
+            __DIR__.'/config/inspire.php' => config_path('inspire.php'),
+        ], 'inspire-config');
+    }
+
+    /**
      * Bootstrap services.
      */
     public function boot(): void
     {
         $this->registerCommands();
+        $this->registerRoutes();
+        $this->registerPublishing();
     }
 }
