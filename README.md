@@ -12,3 +12,17 @@
 This package does not do anything except for displaying random quotes from famous personalities across the world (Of course, not me :wink:). 
 The sole purpose of developing this package is to provide a baseline for creating new packages in **PostboxCMS**. 
 This package can be integrated with any Laravel installation
+
+**Note** - To let the package to be discovered locally, add the following to your composer.json
+
+```
+"repositories": [
+      {
+            "type": "path",
+            "url": "packages/postboxcms/inspire",
+            "options": {
+                "symlink": true
+            }
+        }
+    ]
+```
